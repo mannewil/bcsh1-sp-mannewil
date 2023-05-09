@@ -1,7 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Forms\EditFormWeaponField.cs">
+    <Compile Update="Control\UserControlLabelledTbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control\UserControlLabelledTBoxReadOnly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\ManipulateFormAmmotype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ManipulateFormManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ManipulateFormWeapon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ManipulateFormWeaponType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\MainForm.cs">

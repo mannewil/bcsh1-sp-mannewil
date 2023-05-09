@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Demchenko_BCSH1_SP.Entities;
 
-public record Weapontype : WeaponField
+public class WeaponType : WeaponField, IComparable<WeaponType>
 {
-    public string WeaponClass { get; private set; }
-    public Weapontype(string name, string? WeaponClass) : base(name)
+    public string Specification { get; set; }
+    public WeaponType(string name, string Specification) : base(name)
     {
-        this.WeaponClass = WeaponClass;
+        this.Specification = Specification;
     }
     public override string ToString()
     {
-        return base.ToString() + " ; " + WeaponClass;
+        return base.ToString() + ";" + Specification;
+    }
+
+    public int CompareTo(WeaponType? other)
+    {
+        if (this.ID < other.ID) return 1;
+        else if (this.ID > other.ID)
+            return -1;
+        else return 0;
     }
 }
